@@ -61,6 +61,7 @@ public class FacturaTest {
                         .conTipoModalidad(facturaSinConfirmar.getTipoModalidad())
                         .conVehiculo(facturaSinConfirmar.getVehiculo())
                         .conFechaInicio(facturaSinConfirmar.getFechaInicio())
+                        .conFechaFin(facturaSinConfirmar.getFechaFin())
                         .conPlaca(facturaSinConfirmar.getPlaca())
                         .conEstadoFactura(EstadoFactura.CONFIRMADA).reconstruir();
 
