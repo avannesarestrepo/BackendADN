@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,6 +19,8 @@ public class ComandoModificarFactura {
     private TipoModalidad tipoModalidad;
     private Vehiculo vehiculo;
     private String fechaInicio;
+    private String fechaFin;
+    private BigDecimal valor;
     private String placa;
     private EstadoFactura estadoFactura;
 }

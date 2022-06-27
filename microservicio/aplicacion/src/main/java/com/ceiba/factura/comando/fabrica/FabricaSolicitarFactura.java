@@ -9,6 +9,7 @@ import com.ceiba.vehiculo.puerto.repositorio.RepositorioVehiculo;
 import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Component
 public class FabricaSolicitarFactura {
@@ -34,6 +35,8 @@ public class FabricaSolicitarFactura {
                 comandoModificarFactura.getTipoModalidad(),
                 comandoModificarFactura.getVehiculo(),
                 Timestamp.valueOf(comandoModificarFactura.getFechaInicio()).toLocalDateTime(),
+                Timestamp.valueOf(comandoModificarFactura.getFechaInicio()).toLocalDateTime(),
+                comandoModificarFactura.getValor(),
                 comandoModificarFactura.getPlaca(),
                 comandoModificarFactura.getEstadoFactura()
         );

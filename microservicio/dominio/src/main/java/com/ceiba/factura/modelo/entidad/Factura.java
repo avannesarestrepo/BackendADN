@@ -44,20 +44,6 @@ public class Factura {
         esPlacaObligatorio();
     }
 
-    public Factura(Long id, TipoModalidad tipoModalidad, Vehiculo vehiculo, LocalDateTime fechaInicio,
-                   String placa, EstadoFactura estadoFactura) {
-        this.id = id;
-        this.tipoModalidad = tipoModalidad;
-        this.vehiculo = vehiculo;
-        this.fechaInicio = fechaInicio;
-        this.estadoFactura = estadoFactura;
-        this.fechaFin = calcularFechaFin();
-        this.valor = calcularValorTotal();
-        this.placa = placa;
-        esVehiculoObligatorio();
-        esPlacaObligatorio();
-    }
-
     public Factura(Long id, TipoModalidad tipoModalidad, Vehiculo vehiculo, LocalDateTime fechaInicio, LocalDateTime fechaFin, BigDecimal valor, String placa, EstadoFactura estadoFactura) {
         this.id = id;
         this.tipoModalidad = tipoModalidad;

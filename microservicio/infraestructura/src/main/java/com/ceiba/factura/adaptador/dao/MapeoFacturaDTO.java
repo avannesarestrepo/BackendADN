@@ -27,7 +27,7 @@ public class MapeoFacturaDTO implements RowMapper<FacturaDTO>, MapperResult {
     public FacturaDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
         Long id = rs.getLong("id");
         TipoModalidad tipoModalidad = TipoModalidad.valueOf(rs.getString("tipo_modalidad"));
-        VehiculoDTO vehiculo = rs.getLong("id_vehiculo") > 0 ? daoVehiculo.obtenerVehiculoPorId(rs.getLong("id_vehiculo")):null;
+        VehiculoDTO vehiculo = daoVehiculo.obtenerVehiculoPorId(rs.getLong("id_vehiculo"));
         LocalDateTime fechaInicio =rs.getTimestamp("fecha_inicio").toLocalDateTime();
         LocalDateTime fechaFin =rs.getTimestamp("fecha_fin").toLocalDateTime();
         BigDecimal valor = BigDecimal.valueOf(rs.getDouble("valor"));

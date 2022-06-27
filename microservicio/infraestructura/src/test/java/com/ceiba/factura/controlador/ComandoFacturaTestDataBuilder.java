@@ -18,7 +18,7 @@ public class ComandoFacturaTestDataBuilder {
     private TipoModalidad tipoModalidad;
     private Vehiculo vehiculo;
     private String fechaInicio;
-    private LocalDateTime fechaFin;
+    private String fechaFin;
     private BigDecimal valor;
     private String placa;
     private EstadoFactura estadoFactura;
@@ -47,6 +47,6 @@ public class ComandoFacturaTestDataBuilder {
     }
 
     public ComandoModificarFactura buildActualizar(){
-        return new ComandoModificarFactura(id, tipoModalidad, vehiculo, fechaInicio, placa, estadoFactura);
+        return new ComandoModificarFactura(id, tipoModalidad, vehiculo, fechaInicio, fechaFin, valor, placa, estadoFactura);
     }
 }
