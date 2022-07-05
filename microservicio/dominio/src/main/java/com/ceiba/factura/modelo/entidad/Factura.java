@@ -44,7 +44,7 @@ public class Factura {
         esPlacaObligatorio();
     }
 
-    public Factura(Long id, TipoModalidad tipoModalidad, Vehiculo vehiculo, LocalDateTime fechaInicio, LocalDateTime fechaFin, BigDecimal valor, String placa, EstadoFactura estadoFactura) {
+    public Factura(Long id, TipoModalidad tipoModalidad, Vehiculo vehiculo, LocalDateTime fechaInicio, String placa, EstadoFactura estadoFactura) {
         this.id = id;
         this.tipoModalidad = tipoModalidad;
         this.vehiculo = vehiculo;
@@ -65,12 +65,12 @@ public class Factura {
     }
 
     public static Factura reconstruir(Long id, TipoModalidad tipoModalidad, Vehiculo vehiculo, LocalDateTime fechaInicio,
-                                      LocalDateTime fechaFin, BigDecimal valor, String placa, EstadoFactura estadoFactura){
+                                      String placa, EstadoFactura estadoFactura){
         ValidadorArgumento.validarObligatorio(id, ID_OBLIGATORIO);
         ValidadorArgumento.validarObligatorio(tipoModalidad, TIPO_MODALIDAD_OBLIGATORIO);
         ValidadorArgumento.validarObligatorio(fechaInicio, FECHA_INICIO_OBLIGATORIO);
         ValidadorArgumento.validarObligatorio(estadoFactura, ESTADO_OBLIGATORIO);
-        return new Factura(id,tipoModalidad, vehiculo, fechaInicio, fechaFin, valor, placa, estadoFactura);
+        return new Factura(id,tipoModalidad, vehiculo, fechaInicio, placa, estadoFactura);
     }
 
     public Boolean esMensual(){

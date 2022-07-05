@@ -54,8 +54,7 @@ public class FacturaTestDataBuilder {
     }
 
     public Factura reconstruir(){
-        return Factura.reconstruir(id, tipoModalidad, vehiculo, fechaInicio, fechaFin,
-                valor, placa, estadoFactura);
+        return Factura.reconstruir(id, tipoModalidad, vehiculo, fechaInicio, placa, estadoFactura);
     }
 
     public FacturaTestDataBuilder conId(Long id){

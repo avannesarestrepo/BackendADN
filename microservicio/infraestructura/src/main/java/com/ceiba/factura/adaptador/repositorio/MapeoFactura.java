@@ -29,10 +29,8 @@ public class MapeoFactura implements RowMapper<Factura>, MapperResult {
         TipoModalidad tipoModalidad = TipoModalidad.valueOf(rs.getString("tipo_modalidad"));
         Vehiculo vehiculo = repositorioVehiculo.obtenerVehiculoPorId(rs.getLong("id_vehiculo"));
         LocalDateTime fechaInicio =rs.getTimestamp("fecha_inicio").toLocalDateTime();
-        LocalDateTime fechaFin =rs.getTimestamp("fecha_fin").toLocalDateTime();
-        BigDecimal valor = BigDecimal.valueOf(rs.getDouble("valor"));
         String placa = rs.getString("placa");
         EstadoFactura estado = EstadoFactura.valueOf(rs.getString("estado"));
-        return new Factura(id, tipoModalidad, vehiculo, fechaInicio, fechaFin, valor, placa, estado);
+        return new Factura(id, tipoModalidad, vehiculo, fechaInicio, placa, estado);
     }
 }

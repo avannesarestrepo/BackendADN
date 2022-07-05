@@ -35,8 +35,6 @@ public class FabricaSolicitarFactura {
                 comandoModificarFactura.getTipoModalidad(),
                 comandoModificarFactura.getVehiculo(),
                 Timestamp.valueOf(comandoModificarFactura.getFechaInicio()).toLocalDateTime(),
-                Timestamp.valueOf(comandoModificarFactura.getFechaInicio()).toLocalDateTime(),
-                comandoModificarFactura.getValor(),
                 comandoModificarFactura.getPlaca(),
                 comandoModificarFactura.getEstadoFactura()
         );
