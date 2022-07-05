@@ -73,7 +73,7 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue(ID, factura.getId());
         parameterSource.addValue(TIPO_MODALIDAD, String.valueOf(factura.getTipoModalidad()));
-        parameterSource.addValue(VEHICULO, factura.getVehiculo() != null ? factura.getVehiculo().getId() : 1);
+        parameterSource.addValue(VEHICULO, factura.getVehiculo().getId());
         parameterSource.addValue(FECHA_INICIO, factura.getFechaInicio());
         parameterSource.addValue(FECHA_FIN, factura.getFechaFin());
         parameterSource.addValue(VALOR, factura.getValor());
